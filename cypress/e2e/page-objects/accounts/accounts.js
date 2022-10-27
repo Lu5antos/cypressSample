@@ -5,8 +5,13 @@ export const accountPage = {
     loginPassword: "#loginFrm_password",
     loginSubmitBtn: "#loginFrm > fieldset > .btn",
   },
-  userName: "Tony Stark",
-  loginPassword: "War Machine ROX"
+  user: {
+    fullName: "Thor Odinson",
+    firstName: 'Thor',
+    lastName: "Odinson",
+    email: "Strongest@avenger.com",
+    password: "GodOfThunder4Real",
+  }
   
 };
 
@@ -21,9 +26,10 @@ export default class AccountPage {
   }
 
   //assertions
-  loginForm_Submission(firstName, password) {
+  loginForm_Submission(firstName = accountPage.user.fullName, password = accountPage.user.password) {
     cy.get(accountPage.accountPagePO.loginName).type(firstName);
     cy.get(accountPage.accountPagePO.loginPassword).type(password);
+    cy.get(accountPage.accountPagePO.loginSubmitBtn).click();
 }
 
   verifyAccount() {

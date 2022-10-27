@@ -12,4 +12,5 @@ module.exports = defineConfig({
       automation_store: 'https://automationteststore.com/',
     }
   },
+
 });
