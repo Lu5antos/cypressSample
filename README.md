@@ -30,16 +30,16 @@ For this test automation we will use Page Object Model (POM). So there is predef
     }`
 5. Underneath that export const invoke the following code
 
-`export default class AccountPage { 
-    page actions
-clickAccount(){
-    cy.get(accountPage.pageElement).click();
-  };
-    assertions
-verifyAccount(){
-    cy.contains('HTML Text that needs to be true')
-  };
-};` 
+`export default class AccountPage {` <br>
+    `//page actions ` <br>
+`clickAccount(){`<br>
+    `cy.get(accountPage.pageElement).click();`<br>
+  `};`<br>
+  ` // assertions`<br>
+`verifyAccount(){` <br>
+   ` cy.contains('HTML Text that needs to be true')` <br>
+  `};`<br>
+`};`<br>
 This needs to be formatted
 
 6. This can be done as a setup but can't be completed until you begin writing your test cases.
@@ -51,13 +51,13 @@ This needs to be formatted
 3. insert the following import `import AccoutPage from ../../pageobjects/account.account-page.js`
 4. declare a new variable `accountPage = new AccountPage();`
 5. begin your test case
-6. `describe('this is my test behavior', function () {
-    it('go to the url and login', function () {
-        accountPage.visit();
-        accountPage.login();
-    });
-});
-`
+6. `describe('this is my test behavior', function () {`  <br>
+    `it('go to the url and login', function () {` <br>
+        `accountPage.visit();` <br>
+        `accountPage.login();` <br>
+    `});`<br>
+`});`<br>
+
 7. you will need to build the `.visit()` and `login()` method in the POM file by use the html selectors and page action methods. Chain the actions with the native cypress methods such as `.get()` , `.contains()` , `.click()`
 8. reference the cypress docs for questions <https://docs.cypress.io/guides/overview/why-cypress>. 
 
