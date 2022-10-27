@@ -29,7 +29,8 @@ export default class AccountPage {
   loginForm_Submission(firstName = accountPage.user.fullName, password = accountPage.user.password) {
     cy.get(accountPage.accountPagePO.loginName).type(firstName);
     cy.get(accountPage.accountPagePO.loginPassword).type(password);
-    cy.get(accountPage.accountPagePO.loginSubmitBtn).click();
+    
+    //cy.get(accountPage.accountPagePO.loginSubmitBtn).click();
 }
 
   verifyAccount() {
